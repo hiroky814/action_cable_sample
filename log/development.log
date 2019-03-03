@@ -1,0 +1,1010 @@
+  [1m[35m (2880.0ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (3115.8ms)[0m  [1m[35mCREATE DATABASE "myapp_test" ENCODING = 'unicode'[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started GET "/" for 172.28.0.1 at 2019-03-02 22:18:02 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (11.6ms)
+Completed 200 OK in 62ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.29.0.1 at 2019-03-03 01:24:58 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (141.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTexts (20190302222700)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (88.8ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "text" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190302222700_create_texts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (9.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190302222700"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (11.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (4.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-03 01:25:15.835833"], ["updated_at", "2019-03-03 01:25:15.835833"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 172.29.0.1 at 2019-03-03 01:25:28 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (5.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 1232ms (Views: 1139.0ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 172.29.0.1 at 2019-03-03 01:25:44 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 353ms (Views: 323.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 172.29.0.1 at 2019-03-03 01:27:10 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (1.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 395ms (Views: 354.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/create" for 172.29.0.1 at 2019-03-03 01:27:42 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/create" for 172.29.0.1 at 2019-03-03 01:29:00 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/create" for 172.29.0.1 at 2019-03-03 01:29:32 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/create" for 172.29.0.1 at 2019-03-03 01:48:16 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (10.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2STN0e71hninOD4ecbiQyhKgLrgmCPxW7MLkT/cHlD+g5+uKKk2uZdEuoc7fOhUcKbiOD3345tUT/3moXup34A==", "message"=>"fire 1"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (8.9ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "fire 1"], ["created_at", "2019-03-03 01:48:17.074330"], ["updated_at", "2019-03-03 01:48:17.074330"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1413ms (ActiveRecord: 46.8ms)
+
+
+Started GET "/" for 172.30.0.1 at 2019-03-03 01:50:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (9.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 963ms (Views: 881.3ms | ActiveRecord: 35.8ms)
+
+
+Started POST "/create" for 172.30.0.1 at 2019-03-03 01:50:30 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oyhfs3eNB2gyQZDBRqm0uZHdY23IhqJM8J4+hmMF6Lra63noszUvdURXDxHoKzFvqsXD2pN2uM8Po6NhyugLZQ==", "message"=>"fire 2"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (14.4ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "fire 2"], ["created_at", "2019-03-03 01:50:30.999973"], ["updated_at", "2019-03-03 01:50:30.999973"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1789ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/" for 172.30.0.1 at 2019-03-03 01:50:37 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 323ms (Views: 269.0ms | ActiveRecord: 28.2ms)
+
+
+Started POST "/create" for 172.30.0.1 at 2019-03-03 01:50:44 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oyhfs3eNB2gyQZDBRqm0uZHdY23IhqJM8J4+hmMF6Lra63noszUvdURXDxHoKzFvqsXD2pN2uM8Po6NhyugLZQ==", "message"=>"fire 3"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (0.7ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "fire 3"], ["created_at", "2019-03-03 01:50:44.378727"], ["updated_at", "2019-03-03 01:50:44.378727"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1441ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/sign_in" for 172.30.0.1 at 2019-03-03 01:52:34 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 172.30.0.1 at 2019-03-03 01:53:14 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 764ms (Views: 733.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:53:15 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:53:15 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/" for 172.30.0.1 at 2019-03-03 01:53:16 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (3.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 407ms (Views: 363.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:53:16 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:53:17 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started POST "/create" for 172.30.0.1 at 2019-03-03 01:53:27 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zKqmgmLXdSzJfbFDNtEhmKSVq8ep38pR1KthNVxj5FoI13IedG3gxx+wAWYuEeLEn3/m3x4X6nVXykfgUvKj9g==", "message"=>"chrome 1"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (5.0ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "chrome 1"], ["created_at", "2019-03-03 01:53:27.855665"], ["updated_at", "2019-03-03 01:53:27.855665"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1245ms (ActiveRecord: 9.4ms)
+
+
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:53:38 +0000
+Started POST "/create" for 172.30.0.1 at 2019-03-03 01:53:38 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+ChatChannel stopped streaming from chat_channel
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BctGoNcB9SONyIUDqXq8aTpvGfrUUIQ35fvcsCE28Qp8CGD7E7ndPvveGtMH+Dm/AXe5TY+gnrQaxkFXiNsS1Q==", "message"=>"fire 4"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "fire 4"], ["created_at", "2019-03-03 01:53:38.595933"], ["updated_at", "2019-03-03 01:53:38.595933"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1733ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:53:47 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:53:47 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:06 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:55:06 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:06 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:11 +0000
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:55:15 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:15 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:29 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:55:29 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:29 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:39 +0000
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:55:42 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:55:42 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/" for 172.30.0.1 at 2019-03-03 01:58:50 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (6.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 530ms (Views: 449.6ms | ActiveRecord: 42.7ms)
+
+
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:58:51 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:58:51 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:58:51 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:58:52 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/" for 172.30.0.1 at 2019-03-03 01:58:52 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 339ms (Views: 319.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:58:53 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:58:53 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"chrome 2"})
+Started POST "/create" for 172.30.0.1 at 2019-03-03 01:58:58 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JnuTTwEiEt2o280W6x3p0tdPj4GfyZ28Q4H6Pr88D4biBkfTF5iHNn4WfTPz3SqO7KXCmSgBvZjA4Nzrsa1IKg==", "message"=>"chrome 2"}
+  [1m[35m (14.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (5.1ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "chrome 2"], ["created_at", "2019-03-03 01:58:58.549428"], ["updated_at", "2019-03-03 01:58:58.549428"]]
+  ↳ app/controllers/top_controller.rb:8
+Could not execute command from ({"command"=>"message", "identifier"=>"{\"channel\":\"ChatChannel\"}", "data"=>"{\"message\":\"chrome 2\",\"action\":\"post\"}"}) [NameError - undefined local variable or method `data' for #<ChatChannel:0x00007fb3c8fd80d0>]: /myapp/app/channels/chat_channel.rb:11:in `post' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `public_send' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `dispatch_action' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:168:in `block in perform_action' | /usr/local/bundle/gems/activesupport-5.2.2/lib/active_support/notifications.rb:170:in `instrument'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1685ms (ActiveRecord: 21.1ms)
+
+
+ChatChannel#post({"message"=>"chrome 2"})
+Started POST "/create" for 172.30.0.1 at 2019-03-03 01:59:04 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Could not execute command from ({"command"=>"message", "identifier"=>"{\"channel\":\"ChatChannel\"}", "data"=>"{\"message\":\"chrome 2\",\"action\":\"post\"}"}) [NameError - undefined local variable or method `data' for #<ChatChannel:0x00007fb3c8fd80d0>]: /myapp/app/channels/chat_channel.rb:11:in `post' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `public_send' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `dispatch_action' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:168:in `block in perform_action' | /usr/local/bundle/gems/activesupport-5.2.2/lib/active_support/notifications.rb:170:in `instrument'
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JnuTTwEiEt2o280W6x3p0tdPj4GfyZ28Q4H6Pr88D4biBkfTF5iHNn4WfTPz3SqO7KXCmSgBvZjA4Nzrsa1IKg==", "message"=>"chrome 2"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (0.8ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "chrome 2"], ["created_at", "2019-03-03 01:59:05.197556"], ["updated_at", "2019-03-03 01:59:05.197556"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1411ms (ActiveRecord: 2.6ms)
+
+
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:59:13 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/" for 172.30.0.1 at 2019-03-03 01:59:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (4.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 429ms (Views: 391.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 01:59:14 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 01:59:14 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:03:32 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:03:32 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:03:32 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:03:40 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:03:40 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:03:40 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:01 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:04:01 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:01 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:11 +0000
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:04:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:13 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/" for 172.30.0.1 at 2019-03-03 02:04:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (5.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (64.1ms)
+Completed 200 OK in 724ms (Views: 618.1ms | ActiveRecord: 50.2ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:04:26 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:26 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from ChatChannel
+Started GET "/" for 172.30.0.1 at 2019-03-03 02:04:26 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 313ms (Views: 283.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:04:28 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:28 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from ChatChannel
+ChatChannel#post({"message"=>"aaaa"})
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:29 +0000
+Started POST "/create" for 172.30.0.1 at 2019-03-03 02:04:29 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+ChatChannel stopped streaming from ChatChannel
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esY/YsnYDDqgYvdPguELm8mbM2Oow9VsgEiKQvvPYu0DBRk5DWAkJ9Z0aJ8sY45N8oOT1PMzz+9/dRelUiKBMg==", "message"=>"aaaa"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+Could not execute command from ({"command"=>"message", "identifier"=>"{\"channel\":\"ChatChannel\"}", "data"=>"{\"message\":\"aaaa\",\"action\":\"post\"}"}) [NameError - undefined local variable or method `data' for #<ChatChannel:0x000055ba060e17d8>]: /myapp/app/channels/chat_channel.rb:11:in `post' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `public_send' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `dispatch_action' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:168:in `block in perform_action' | /usr/local/bundle/gems/activesupport-5.2.2/lib/active_support/notifications.rb:170:in `instrument'
+  [1m[36mText Create (30.1ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "aaaa"], ["created_at", "2019-03-03 02:04:30.658144"], ["updated_at", "2019-03-03 02:04:30.658144"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1862ms (ActiveRecord: 33.6ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:04:36 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:04:37 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from ChatChannel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:14:13 +0000
+ChatChannel stopped streaming from ChatChannel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:14:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:14:13 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:14:20 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:14:20 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:14:48 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:14:48 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:14:48 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:22:21 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:22:21 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:22:21 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:23:00 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:23:00 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:23:00 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:23:56 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:23:56 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:23:56 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"aaaa"})
+Started POST "/create" for 172.30.0.1 at 2019-03-03 02:24:45 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:24:45 +0000
+ChatChannel stopped streaming from chat_channel
+Could not execute command from ({"command"=>"message", "identifier"=>"{\"channel\":\"ChatChannel\"}", "data"=>"{\"message\":\"aaaa\",\"action\":\"post\"}"}) [NameError - undefined local variable or method `data' for #<ChatChannel:0x00007fb3c8bc3f08>]: /myapp/app/channels/chat_channel.rb:11:in `post' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `public_send' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:268:in `dispatch_action' | /usr/local/bundle/gems/actioncable-5.2.2/lib/action_cable/channel/base.rb:168:in `block in perform_action' | /usr/local/bundle/gems/activesupport-5.2.2/lib/active_support/notifications.rb:170:in `instrument'
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esY/YsnYDDqgYvdPguELm8mbM2Oow9VsgEiKQvvPYu0DBRk5DWAkJ9Z0aJ8sY45N8oOT1PMzz+9/dRelUiKBMg==", "message"=>"aaaa"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (4.7ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "aaaa"], ["created_at", "2019-03-03 02:24:46.930377"], ["updated_at", "2019-03-03 02:24:46.930377"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1568ms (ActiveRecord: 76.6ms)
+
+
+Started GET "/" for 172.30.0.1 at 2019-03-03 02:24:50 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (4.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 319ms (Views: 292.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:24:51 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:24:51 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"baaaa"})
+[ActionCable] Broadcasting to chat_channel: {"message"=>"baaaa", "action"=>"post"}
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:24:53 +0000
+ChatChannel transmitting {"message"=>"baaaa", "action"=>"post"} (via streamed from chat_channel)
+Started POST "/create" for 172.30.0.1 at 2019-03-03 02:24:53 +0000
+ChatChannel stopped streaming from chat_channel
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mhKf2UzZJTtDDLlKcADIFNaSqqG8wE7MdiPwP9LzHeXq2wkoYtMiZsarTWHQob2aELqHd0DG7jO5RInVqYvqA==", "message"=>"baaaa"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (4.4ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "baaaa"], ["created_at", "2019-03-03 02:24:53.971548"], ["updated_at", "2019-03-03 02:24:53.971548"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:24:54 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:24:54 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1671ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:25:00 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:25:00 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:26:30 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.30.0.1 at 2019-03-03 02:26:30 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.30.0.1 at 2019-03-03 02:26:30 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:28:24 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:28:25 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:28:25 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:28:25 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:28:41 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/" for 172.31.0.1 at 2019-03-03 02:28:42 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (14.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 2268ms (Views: 2167.0ms | ActiveRecord: 45.2ms)
+
+
+Started GET "/" for 172.31.0.1 at 2019-03-03 02:28:49 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 368ms (Views: 329.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:28:49 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:28:49 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/" for 172.31.0.1 at 2019-03-03 02:28:56 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 534ms (Views: 504.3ms | ActiveRecord: 2.9ms)
+
+
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:28:57 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:28:57 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:28:57 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:29:19 +0000
+Ignoring message processed after the WebSocket was closed: "{\"command\":\"message\",\"identifier\":\"{\\\"channel\\\":\\\"ChatChannel\\\"}\",\"data\":\"{\\\"message\\\":\\\"fire fox\\\",\\\"action\\\":\\\"post\\\"}\"}")
+ChatChannel stopped streaming from chat_channel
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:29:19 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nRZhAqeeWEzmKiWAmN9rOosU3gtGdCnplIYEEzvCnh7k1UdZYyZwUZA8ulA2Xe7ssAx+vB2EM2pru5n0ki99wQ==", "message"=>"fire fox"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (24.6ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "fire fox"], ["created_at", "2019-03-03 02:29:19.748501"], ["updated_at", "2019-03-03 02:29:19.748501"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1506ms (ActiveRecord: 42.4ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:29:25 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:29:25 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"test"})
+[ActionCable] Broadcasting to chat_channel: {"message"=>"test", "action"=>"post"}
+ChatChannel transmitting {"message"=>"test", "action"=>"post"} (via streamed from chat_channel)
+ChatChannel transmitting {"message"=>"test", "action"=>"post"} (via streamed from chat_channel)
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:32:42 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbfuUR9jv1CfH8HU3lJwsxulmSgjcR4XT4oKJGCR0oOZyjrNCdkqu0nScfHGkrPvIE/UMJS5PjPM6yzxbgCVLw==", "message"=>"test"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (1.1ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "test"], ["created_at", "2019-03-03 02:32:42.594264"], ["updated_at", "2019-03-03 02:32:42.594264"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1530ms (ActiveRecord: 61.5ms)
+
+
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:32:46 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbfuUR9jv1CfH8HU3lJwsxulmSgjcR4XT4oKJGCR0oOZyjrNCdkqu0nScfHGkrPvIE/UMJS5PjPM6yzxbgCVLw==", "message"=>"test"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (0.8ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "test"], ["created_at", "2019-03-03 02:32:46.212805"], ["updated_at", "2019-03-03 02:32:46.212805"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1901ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:32:50 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:32:50 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:32:51 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:32:51 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"nija"})
+post(data)
+[ActionCable] Broadcasting to chat_channel: {"message"=>"nija", "action"=>"post"}
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:33:04 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+ChatChannel transmitting {"message"=>"nija", "action"=>"post"} (via streamed from chat_channel)
+ChatChannel transmitting {"message"=>"nija", "action"=>"post"} (via streamed from chat_channel)
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbfuUR9jv1CfH8HU3lJwsxulmSgjcR4XT4oKJGCR0oOZyjrNCdkqu0nScfHGkrPvIE/UMJS5PjPM6yzxbgCVLw==", "message"=>"nija"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (3.6ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "nija"], ["created_at", "2019-03-03 02:33:04.445987"], ["updated_at", "2019-03-03 02:33:04.445987"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1742ms (ActiveRecord: 5.2ms)
+
+
+ChatChannel#post({"message"=>"nijaadfa"})
+post(data)
+[ActionCable] Broadcasting to chat_channel: {"message"=>"nijaadfa", "action"=>"post"}
+ChatChannel transmitting {"message"=>"nijaadfa", "action"=>"post"} (via streamed from chat_channel)
+ChatChannel transmitting {"message"=>"nijaadfa", "action"=>"post"} (via streamed from chat_channel)
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:33:34 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbfuUR9jv1CfH8HU3lJwsxulmSgjcR4XT4oKJGCR0oOZyjrNCdkqu0nScfHGkrPvIE/UMJS5PjPM6yzxbgCVLw==", "message"=>"nijaadfa"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "nijaadfa"], ["created_at", "2019-03-03 02:33:35.306821"], ["updated_at", "2019-03-03 02:33:35.306821"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1692ms (ActiveRecord: 28.9ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:33:41 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:33:41 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:33:41 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:33:41 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"fire foxafa"})
+[ActionCable] Broadcasting to chat_channel: {"message"=>"fire foxafa", "action"=>"post"}
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:35:49 +0000
+ChatChannel stopped streaming from chat_channel
+ChatChannel transmitting {"message"=>"fire foxafa", "action"=>"post"} (via streamed from chat_channel)
+ChatChannel transmitting {"message"=>"fire foxafa", "action"=>"post"} (via streamed from chat_channel)
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:35:49 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nRZhAqeeWEzmKiWAmN9rOosU3gtGdCnplIYEEzvCnh7k1UdZYyZwUZA8ulA2Xe7ssAx+vB2EM2pru5n0ki99wQ==", "message"=>"fire foxafa"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "fire foxafa"], ["created_at", "2019-03-03 02:35:49.906156"], ["updated_at", "2019-03-03 02:35:49.906156"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1540ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:35:57 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:35:57 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:35:57 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:35:57 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:36:00 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/" for 172.31.0.1 at 2019-03-03 02:36:00 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#show as HTML
+  Rendering top/show.html.erb within layouts/application
+  [1m[36mText Load (2.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts"[0m
+  ↳ app/views/top/show.html.erb:3
+  Rendered top/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 358ms (Views: 315.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:36:01 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:36:01 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"fire foxafaafafa"})
+[ActionCable] Broadcasting to chat_channel: {"message"=>"fire foxafaafafa", "action"=>"post"}
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:36:03 +0000
+ChatChannel transmitting {"message"=>"fire foxafaafafa", "action"=>"post"} (via streamed from chat_channel)
+ChatChannel transmitting {"message"=>"fire foxafaafafa", "action"=>"post"} (via streamed from chat_channel)
+ChatChannel stopped streaming from chat_channel
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:36:03 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"io0am/MLFmA+mAMp30FD0PupAlGo5dUTA0IoMt/sM7HzTjzAN7M+fUiOnPlxw8YGwLGi5vMVz5D8f7XVdgHQbg==", "message"=>"fire foxafaafafa"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (6.8ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "fire foxafaafafa"], ["created_at", "2019-03-03 02:36:03.472081"], ["updated_at", "2019-03-03 02:36:03.472081"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1544ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:36:10 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:36:10 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+ChatChannel#post({"message"=>"afafafafafa"})
+[ActionCable] Broadcasting to chat_channel: {"message"=>"afafafafafa", "action"=>"post"}
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:36:32 +0000
+ChatChannel stopped streaming from chat_channel
+ChatChannel transmitting {"message"=>"afafafafafa", "action"=>"post"} (via streamed from chat_channel)
+ChatChannel transmitting {"message"=>"afafafafafa", "action"=>"post"} (via streamed from chat_channel)
+Started POST "/create" for 172.31.0.1 at 2019-03-03 02:36:32 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"io0am/MLFmA+mAMp30FD0PupAlGo5dUTA0IoMt/sM7HzTjzAN7M+fUiOnPlxw8YGwLGi5vMVz5D8f7XVdgHQbg==", "message"=>"afafafafafa"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/top_controller.rb:8
+  [1m[36mText Create (1.4ms)[0m  [1m[32mINSERT INTO "texts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "afafafafafa"], ["created_at", "2019-03-03 02:36:32.816259"], ["updated_at", "2019-03-03 02:36:32.816259"]]
+  ↳ app/controllers/top_controller.rb:8
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/top_controller.rb:8
+No template found for TopController#create, rendering head :no_content
+Completed 204 No Content in 1661ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:36:41 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:36:41 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:41:58 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:41:58 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:41:58 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:45:48 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:45:48 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:45:48 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:48:55 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:48:55 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:48:55 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+Finished "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:50:55 +0000
+ChatChannel stopped streaming from chat_channel
+Started GET "/cable" for 172.31.0.1 at 2019-03-03 02:50:55 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 172.31.0.1 at 2019-03-03 02:50:55 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
